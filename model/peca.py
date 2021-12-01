@@ -1,7 +1,7 @@
 # Descrição: Peça
 # Contém os atributos da peça
 
-class Peça():
+class Peca():
     def __init__(self, id, nome, valor, validade):
         self.id = id
         self.nome = nome
