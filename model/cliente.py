@@ -8,6 +8,6 @@ class Cliente():
         self.endereco = endereco
         self.telefone = telefone
 
-    def print(self):
-        print(self.id, self.nome, self.endereco, self.telefone)
+    def imprime(self):
+        print(f"ID - {self.id}, NOME - {self.nome}, ENDEREÇO - {self.endereco}, TELEFONE - {self.telefone}")
         
