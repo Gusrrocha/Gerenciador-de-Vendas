@@ -13,12 +13,18 @@ def edit(peca):
     for index in range(0, len(lista_pecas)):
         peca_atual = lista_pecas[index]
         if peca.id == peca_atual.id:
+            # se forem iguais significa que o cliente está armazenado
+            # na posição definida pelo index
+            lista_pecas[index] = peca # substitui o objeto da posição informada pelo index
+            return
+
+def delete(id_peca):
+    for index in range(0, len(lista_pecas)):
+        peca_atual = lista_pecas[index]
+        if id_peca == peca_atual.id:
             del lista_pecas[index]
 
             return
-
-def delete():
-    pass
 
 def lista_peca():
     pass
