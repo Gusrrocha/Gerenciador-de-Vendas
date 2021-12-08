@@ -12,11 +12,15 @@ def getCliente(id):
     # CASO não encontrar o cliente com o ID informado
     return None
 # adicionar novo cliente
-def add(novo_cliente):
+def adicionar(novo_cliente):
+    # Inserir o ID do cliente
+    novo_id = len(lista_clientes)+1
+    novo_cliente.id = novo_id
+    # Insere o cliente na lista
     lista_clientes.append(novo_cliente)
 # editar novo cliente
 # Editar cliente - Dado um objeto cliente, achá-lo na lista e atualiza-lo
-def edit(cliente):
+def editar(cliente):
     # achar a posição na lista em que o cliente editado está armazenado
     for index in range(0, len(lista_clientes)):
         cliente_atual = lista_clientes[index]
@@ -28,7 +32,7 @@ def edit(cliente):
             
 # excluir cliente
 # Dado o ID do cliente, removê-lo da lista
-def delete(id_cliente):
+def deletar(id_cliente):
     for index in range(0, len(lista_clientes)):
         cliente_atual = lista_clientes[index]
         if id_cliente == cliente_atual.id:
@@ -44,5 +48,5 @@ def listAll():
     
 # pegar um cliente específico
 # Dado o ID do cliente, imprimir seus dados
-def listar_todos(id):
+def listar_especifico(id):
     pass

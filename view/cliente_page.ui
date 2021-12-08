@@ -48,7 +48,7 @@
       </spacer>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="novo_cliente_btn">
+      <widget class="QPushButton" name="novo_btn">
        <property name="text">
         <string>Novo</string>
        </property>
@@ -64,14 +64,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="placeholderText">
-      <string>Digite o cliente irá quer visualizar</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QTableWidget" name="tableWidget">
+    <widget class="QTableWidget" name="tabela">
      <column>
       <property name="text">
        <string>#</string>
@@ -81,15 +74,32 @@
       <property name="text">
        <string>Nome</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Endereço</string>
       </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
      </column>
      <column>
       <property name="text">
        <string>Telefone</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Ações</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
       </property>
      </column>
     </widget>

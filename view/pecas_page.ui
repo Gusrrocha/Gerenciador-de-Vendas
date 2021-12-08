@@ -51,7 +51,7 @@
       </spacer>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="nova_peca_btn">
+      <widget class="QPushButton" name="novo_btn">
        <property name="text">
         <string>Novo</string>
        </property>
@@ -102,6 +102,22 @@
      <column>
       <property name="text">
        <string>Validade</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantidade</string>
+      </property>
+      <property name="textAlignment">
+       <set>AlignCenter</set>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Ações</string>
       </property>
       <property name="textAlignment">
        <set>AlignCenter</set>

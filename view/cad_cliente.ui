@@ -59,35 +59,35 @@
       </widget>
      </item>
      <item row="4" column="3">
-      <widget class="QPushButton" name="cancelar_clientes_btn">
+      <widget class="QPushButton" name="cancelar_btn">
        <property name="text">
         <string>Cancelar</string>
        </property>
       </widget>
      </item>
      <item row="4" column="4">
-      <widget class="QPushButton" name="salvar_cliente_btn">
+      <widget class="QPushButton" name="salvar_btn">
        <property name="text">
         <string>Salvar</string>
        </property>
       </widget>
      </item>
      <item row="3" column="1" colspan="4">
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="telefone">
        <property name="placeholderText">
         <string>Digite o telefone do cliente</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1" colspan="4">
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="endereco">
        <property name="placeholderText">
         <string>Digite o endereço do cliente</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1" colspan="4">
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="nome">
        <property name="placeholderText">
         <string>Digite o nome do cliente</string>
        </property>
