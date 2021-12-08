@@ -45,8 +45,8 @@ class PecasPage(QWidget):
         id = QTableWidgetItem(str(peca.id))
         nome = QTableWidgetItem(peca.nome)
         valor = QTableWidgetItem(peca.valor)
-        validade = QTableWidgetItem(peca.validade)
-        quantidade = QTableWidgetItem(peca.quantidade)
+        validade = QTableWidgetItem(str(peca.validade))
+        quantidade = QTableWidgetItem(str(peca.quantidade))
 
 
         self.tabela.setItem(rowCount, 0, id)
