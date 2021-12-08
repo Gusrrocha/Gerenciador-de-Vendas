@@ -109,14 +109,6 @@
      </column>
      <column>
       <property name="text">
-       <string>Quantidade</string>
-      </property>
-      <property name="textAlignment">
-       <set>AlignCenter</set>
-      </property>
-     </column>
-     <column>
-      <property name="text">
        <string>Ações</string>
       </property>
       <property name="textAlignment">
