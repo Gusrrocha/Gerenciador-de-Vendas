@@ -35,13 +35,6 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="resumo_btn">
-        <property name="text">
-         <string>Resumo</string>
-        </property>
-       </widget>
-      </item>
       <item row="2" column="0">
        <widget class="QPushButton" name="clientes_btn">
         <property name="text">
@@ -56,7 +49,14 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="resumo_btn">
+        <property name="text">
+         <string>Resumo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
        <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -68,6 +68,13 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="vendas_btn">
+        <property name="text">
+         <string>Vendas</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
