@@ -22,9 +22,8 @@ class CadPecaWindow(QWidget):
         nome = self.nome.text()
         validade = self.validade.value()
         valor = self.valor.text()
-        quantidade = self.quantidade.value()
 
-        nova_peca = Peca(None, nome, valor, validade, quantidade)
+        nova_peca = Peca(None, nome, valor, validade)
         funcoes_pecas.add(nova_peca)
 
         self.janela_cliente.carrega_dados()
