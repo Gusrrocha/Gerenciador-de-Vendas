@@ -4,7 +4,7 @@ from qt_core import *
 from controller.cliente_page import ClientesPage
 from controller.pecas_page import PecasPage
 from controller.resumo_page import ResumoPage
-from controller.vendas_page import VendasPage
+from controller.cad_venda import CadVendaPage
 FILE_UI = 'view/mainwindow.ui'
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
         self.resumo_page = ResumoPage()
         self.clientes_page = ClientesPage()
         self.pecas_page = PecasPage()
-        self.vendas_page = VendasPage()
+        self.vendas_page = CadVendaPage()
 
         # Adicionar as páginas ao painel_principal
         self.painel_principal.insertWidget(0,self.resumo_page)
