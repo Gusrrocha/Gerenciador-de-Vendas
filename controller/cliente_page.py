@@ -20,7 +20,7 @@ class ClientesPage(QWidget):
         #configurações da tabela
         self.tabela.verticalHeader().setVisible(False)
         self.tabela.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch) #ajusta ao tamanho da tela
-        self.tabela.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents)
+        self.tabela.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents) # ajusta pelo conteúdo da coluna
         self.tabela.horizontalHeader().setSectionResizeMode(3, QHeaderView.ResizeToContents) # ajusta pelo conteúdo da coluna
         self.tabela.horizontalHeader().setSectionResizeMode(4, QHeaderView.ResizeToContents) # ajusta pelo conteúdo da coluna
 
@@ -56,3 +56,8 @@ class ClientesPage(QWidget):
         self.tabela.setItem(rowCount, 1, nome)
         self.tabela.setItem(rowCount, 2, endereco)
         self.tabela.setItem(rowCount, 3, telefone)
+
+    
+
+            
+    

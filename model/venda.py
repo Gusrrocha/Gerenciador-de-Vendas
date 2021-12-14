@@ -1,14 +1,12 @@
-# Descrição: Venda
-
-from model.cliente import Cliente
-
 
 class Venda():
-    def __init__(self, id, cliente, data, lista_de_itens):
+    def __init__(self, id,cliente, data, lista_de_itens):
         self.id = id
         self.cliente = cliente
-        self.lista_de_itens = lista_de_itens
+        self.data = data
+        self.lista_de_itens = lista_de_itens 
 
+    #calcula o valor total da venda
     def valorTotal(self):
         vtotal = 0
         for peca in self.lista_de_itens:

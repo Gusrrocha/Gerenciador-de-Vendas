@@ -1,52 +1,60 @@
-
-# Padrão DAO (data acess object)
+# Padrão DAO (Data Access Object)
 # Centraliza o acesso aos dados dos objetos cliente
-from model.cliente import Cliente
+
+# lista que irá armazenar todos os clientes do sistema
 lista_clientes = []
-#pega um cliente pelo ID
-def getCliente(id):
-    for c in lista_clientes:
-        if c.id == id:
-            return c #retornar
-    
-    # CASO não encontrar o cliente com o ID informado
-    return None
-# adicionar novo cliente
+
+# Adcionar novo cliente
 def adicionar(novo_cliente):
-    # Inserir o ID do cliente
-    novo_id = len(lista_clientes)+1
-    novo_cliente.id = novo_id
-    # Insere o cliente na lista
+    # inserir o ID do cliente
+    novo_id = len(lista_clientes)
+    novo_cliente.id =  novo_id
+    #insere o cliente na lista
     lista_clientes.append(novo_cliente)
-# editar novo cliente
-# Editar cliente - Dado um objeto cliente, achá-lo na lista e atualiza-lo
+
+# Retorna o cliente com o id informado
+def pegarCliente(id):
+    # busca na lista de clientes
+    for cliente in lista_clientes:
+        if cliente.id == id:  # verifica se o id do objeto na lista é igual ao enviado por parâmetro
+            # retorna o objeto cliente
+            return cliente  # return -> retornar
+
+    # quando não encontrar nenhum cliente com o id informado
+    return None  # None -> vazio
+
+# Editar cliente - Dado um objeto cliente, buscar na
+# lista através do seu ID e atualizá-lo
 def editar(cliente):
-    # achar a posição na lista em que o cliente editado está armazenado
+    # achar a posição na lista em que o cliente a ser editado está armazenado
     for index in range(0, len(lista_clientes)):
+        # pego o elemento com posição definido pelo index na lista
         cliente_atual = lista_clientes[index]
         if cliente.id == cliente_atual.id:
             # se forem iguais significa que o cliente está armazenado
             # na posição definida pelo index
-            lista_clientes[index] = cliente # substitui o objeto da posição informada pelo index
-            return
-            
-# excluir cliente
-# Dado o ID do cliente, removê-lo da lista
-def deletar(id_cliente):
+            # substitui (atribui) o objeto da posição informada pelo index
+            lista_clientes[index] = cliente
+
+# Excluir cliente - Dado o ID do cliente, removê-lo da lista
+def excluir(id_cliente):
     for index in range(0, len(lista_clientes)):
         cliente_atual = lista_clientes[index]
         if id_cliente == cliente_atual.id:
             del lista_clientes[index]
+            # parar de buscar na lista, porque o id é único
+            return  # retorna algo vazio apenas para quebrar o loop do for
 
-            return
+# Listar todos os cliente
+def listar_todos():
+    # passa por todos os clientes da lista e
+    # chama a função imprime() desses objetos
+    for cliente in lista_clientes:
+        cliente.imprime()
 
-# listar todos os clientes
-def listAll():
-    for c in lista_clientes:
-        c.imprime()
-    
-    
-# pegar um cliente específico
+# Listar um cliente específico
 # Dado o ID do cliente, imprimir seus dados
+
+
 def listar_especifico(id):
     pass

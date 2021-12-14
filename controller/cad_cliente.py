@@ -1,6 +1,7 @@
 from model.cliente import Cliente
 import model.clientedao as funcoes_clientes
 from qt_core import *
+
 FILE_UI = 'view/cad_cliente.ui'
 
 
