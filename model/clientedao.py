@@ -13,6 +13,8 @@ def adicionar(novo_cliente):
     lista_clientes.append(novo_cliente)
 
 # Retorna o cliente com o id informado
+
+
 def pegarCliente(id):
     # busca na lista de clientes
     for cliente in lista_clientes:
@@ -25,6 +27,8 @@ def pegarCliente(id):
 
 # Editar cliente - Dado um objeto cliente, buscar na
 # lista através do seu ID e atualizá-lo
+
+
 def editar(cliente):
     # achar a posição na lista em que o cliente a ser editado está armazenado
     for index in range(0, len(lista_clientes)):
@@ -37,7 +41,9 @@ def editar(cliente):
             lista_clientes[index] = cliente
 
 # Excluir cliente - Dado o ID do cliente, removê-lo da lista
-def excluir(id_cliente):
+
+
+def excuir(id_cliente):
     for index in range(0, len(lista_clientes)):
         cliente_atual = lista_clientes[index]
         if id_cliente == cliente_atual.id:
@@ -46,6 +52,8 @@ def excluir(id_cliente):
             return  # retorna algo vazio apenas para quebrar o loop do for
 
 # Listar todos os cliente
+
+
 def listar_todos():
     # passa por todos os clientes da lista e
     # chama a função imprime() desses objetos
@@ -56,5 +64,5 @@ def listar_todos():
 # Dado o ID do cliente, imprimir seus dados
 
 
-def listar_especifico(id):
+def lista_cliente(id):
     pass

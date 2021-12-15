@@ -1,34 +1,48 @@
- # classe principal
-from model.peca import Peca
-from model.cliente import Cliente
-from model.clientedao import *
+# classe principal
+# import - importa funções, variáveis, classes de outros arquivos
 
-# ADICIONAR CLIENTES
-for i in range(0,15):
-    novo_cliente = Cliente(i, f'Cliente - {i}', 'rua da rua', '31435245254')
-    # CHAMADA DA FUNÇÃO DE ADICIONAR UM CLIENTE EM CLIENTE DAO.PY
-    add(novo_cliente)
-# EXCLUIR UM CLIENTE
-delete(13)
-delete(12)
+# de /model/cliente.py importe Cliente (é uma classe)
+from model.cliente import Cliente
+
+# carrega o arquivo do diretório /model/cliente_dao.py
+# e define um apelido chamado funcoes_clientes para prover 
+# acesso as funções definidas no arquivo importado
+import model.cliente_dao as funcoes_clientes
+
+# ADCIONAR CLIENTES
+for i in range(0, 5):
+    novo_cliente = Cliente(None, f'Cliente-{i}', 'rua a', '75 9 8888888')
+    # CHAMADA DA FUNÇÃO DE ADICIONAR UM CLIENTE EM CLIENTE_DAO.PY
+    funcoes_clientes.adicionar(novo_cliente)
+
+# EXCLUI CLIENTE
+
+"""funcoes_clientes.excuir(0)
+funcoes_clientes.excuir(10)
+funcoes_clientes.excuir(5)
+funcoes_clientes.excuir(7)
+funcoes_clientes.excuir(11)
+funcoes_clientes.excuir(14)
+funcoes_clientes.excuir(13)
+funcoes_clientes.excuir(12)"""
 
 # EDIÇÃO DE UM CLIENTE
 
-# 1 - Qual o ID do cliente que deseja entrar
-# id_cliente = 4
+# 1 - Qual o ID do cliente que desejo editar?
+#id_cliente = 4
 
-# 2 - Pegar todas as informações do cliente
-get_cliente = getCliente(3)
+# 2 - Pegar todas as informações do cliente com ID = 4 
+# (Pegar o objeto cliente na lista de clientes que possui o ID 4)
+
+#cliente_edit = funcoes_clientes.pegarCliente(id_cliente) # retorna o objeto cliente com id = 4
 
 # 3 - Fazer a edição dos campos localmente
-get_cliente.nome = 'Gustavo Rocha'
-get_cliente.endereco = 'Rua da rua'
-get_cliente.telefone = '71 9 314134143'
+"""cliente_edit.nome = 'Kauãn Nascimento'
+cliente_edit.endereco = 'Rua Alguma coisa, n 789'
+cliente_edit.telefone = '75 9 7894-2310'"""
 
 # 4 - salvar o elemento na lista
-edit(get_cliente)
+"""funcoes_clientes.editar(cliente_edit)"""
 
-# 5 - Lista todos os clientes
-listAll()
-
-# 6 - 
+# imprimir todos os clientes
+funcoes_clientes.listar_todos()

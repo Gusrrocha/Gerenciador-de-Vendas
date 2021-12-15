@@ -1,11 +1,11 @@
 from controller.cad_peca import CadPecaWindow
-import model.pecadao as peca_dao
+import model.pecadao as pecadao
 from qt_core import *
 
 FILE_UI = 'view/pecas_page.ui'
 
 
-class PecasPage(QWidget):
+class PecaPage(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi(FILE_UI, self)
@@ -27,7 +27,7 @@ class PecasPage(QWidget):
         self.peca_window.show()
     
     def carrega_dados(self):
-        lista = peca_dao.lista_pecas
+        lista = pecadao.lista_pecas
         self.tabela.setRowCount(0)
         for p in lista:
             self.add_linha(p)

@@ -4,7 +4,7 @@ class Venda():
         self.id = id
         self.cliente = cliente
         self.data = data
-        self.lista_de_itens = lista_de_itens 
+        self.lista_de_itens = lista_de_itens #lista e peças a serem compradas
 
     #calcula o valor total da venda
     def valorTotal(self):

@@ -1,11 +1,12 @@
 # Classe que irá controlar o main_window.ui
-
 from qt_core import *
 from controller.cliente_page import ClientesPage
-from controller.pecas_page import PecasPage
+from controller.pecas_page import PecaPage
 from controller.resumo_page import ResumoPage
 from controller.cad_venda import CadVendaPage
-FILE_UI = 'view/mainwindow.ui'
+
+
+FILE_UI = 'view/main_window.ui'
 
 
 class MainWindow(QMainWindow):
@@ -16,11 +17,11 @@ class MainWindow(QMainWindow):
         # criar os objetos referente as páginas
         self.resumo_page = ResumoPage()
         self.clientes_page = ClientesPage()
-        self.peca_page = PecasPage()
+        self.peca_page = PecaPage()
         self.cad_venda = CadVendaPage()
 
         # Adicionar as páginas ao painel_principal
-        self.painel_principal.insertWidget(0, self.resumo_page)
+        self.painel_principal.insertWidget(0, self.resumo_page)  # pág 0
         self.painel_principal.insertWidget(1, self.clientes_page)
         self.painel_principal.insertWidget(2, self.peca_page)
         self.painel_principal.insertWidget(3, self.cad_venda)
